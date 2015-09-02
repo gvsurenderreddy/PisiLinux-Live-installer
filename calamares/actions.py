@@ -12,12 +12,14 @@ def setup():
                           -DCMAKE_INSTALL_PREFIX=/usr \
                           -DWITH_PARTITIONMANAGER=1 \
                           -DCMAKE_INSTALL_LIBDIR=lib \
-                          -DWITH_PARTITIONMANAGER:BOOL=ON \
+                          -DCMAKE_BUILD_TYPE:STRING=RelWithDebInfo \
                           ")
+    
 def build():
     cmaketools.make()
 
 def install():
     cmaketools.install()
+    
 
     pisitools.dodoc("README.*")

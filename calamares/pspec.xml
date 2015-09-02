@@ -15,6 +15,9 @@
         <Description>Calamares is a distribution-independent system installer, with an advanced partitioning feature for both manual and automated partitioning operations.</Description>
         <Archive sha1sum="1c4453d80a6726f71b09c21b930e1b71519da981" type="targz">https://github.com/calamares/calamares/releases/download/v1.1.2/calamares-1.1.2.tar.gz</Archive>
         <BuildDependencies>
+            <Dependency>gettext</Dependency>
+            <Dependency>pkgconfig</Dependency>
+            <Dependency>qt5-declarative-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-svg-devel</Dependency>
             <Dependency>qt5-webkit-devel</Dependency>
@@ -32,6 +35,8 @@
             <Dependency>qt5-designer-devel</Dependency>
             <Dependency>python3-devel</Dependency>
             <Dependency>boost-devel</Dependency>
+            <Dependency>yaml-cpp</Dependency>
+            <Dependency>kcoreaddons</Dependency>
             <Dependency>libutil-linux-devel</Dependency>
         </BuildDependencies>
         <Patches>
@@ -43,9 +48,20 @@
         <Name>calamres</Name>
         <IsA>app:gui</IsA>
         <RuntimeDependencies>
+            <Dependency>gawk</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>gptfdisk</Dependency>
             <Dependency>yaml-cpp</Dependency>
+            <Dependency>e2fsprogs</Dependency>
+            <Dependency>efibootmgr</Dependency>
+            <Dependency>libxkbfile</Dependency>
+            <Dependency>dosfstools</Dependency>
+            <Dependency>ntfs-3g</Dependency>
+            <Dependency>coreutils</Dependency>
+            <Dependency>util-linux</Dependency>
+            <Dependency>dmidecode</Dependency>
+            <Dependency>shadow</Dependency>
+            <Dependency>polkit</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/calamares</Path>
