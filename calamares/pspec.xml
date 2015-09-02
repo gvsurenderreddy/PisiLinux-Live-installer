@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>calamares</Name>
+        <Homepage>http://calamares.io</Homepage>
+        <Packager>
+            <Name>Ergün Salman</Name>
+            <Email>Poyraz76@pisilinux.org</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <Icon>calamares</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>A distribution independent installer framework</Summary>
+        <Description>Calamares is a distribution-independent system installer, with an advanced partitioning feature for both manual and automated partitioning operations.</Description>
+        <Archive sha1sum="1c4453d80a6726f71b09c21b930e1b71519da981" type="targz">https://github.com/calamares/calamares/releases/download/v1.1.2/calamares-1.1.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-svg-devel</Dependency>
+            <Dependency>qt5-webkit-devel</Dependency>
+            <Dependency>kconfig-devel</Dependency>
+            <Dependency>ki18n-devel</Dependency>
+            <Dependency>parted-devel</Dependency>
+            <Dependency>libatasmart-devel</Dependency>
+            <Dependency>udisks2-devel</Dependency>
+            <Dependency>polkit-qt-devel</Dependency>
+            <Dependency>kcoreaddons-devel</Dependency>
+            <Dependency>solid-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
+            <Dependency>libyaml-devel</Dependency>
+            <Dependency>qt5-assistant-devel</Dependency>
+            <Dependency>qt5-designer-devel</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>boost-devel</Dependency>
+            <Dependency>libutil-linux-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+<!--             <Patch level="1">luks_removal.patch</Patch> -->
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>calamres</Name>
+        <IsA>app:gui</IsA>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>gptfdisk</Dependency>
+            <Dependency>yaml-cpp</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/calamares</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/lib/calamares/modules/*</Path>
+            <Path fileType="library">/usr/lib/calamares/</Path>
+            <Path fileType="library">/usr/lib/cmake/Calamares/</Path>
+            <Path fileType="data">/usr/include/libcalamares/*</Path>
+            <Path fileType="data">/usr/share/config/akonadi*</Path>
+            <Path fileType="data">/usr/share/*</Path>
+            <Path fileType="doc">/usr/share/doc/calamares/*</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/calamares.desktop">calamares.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/installer.svg">installer.svg</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2015-09-01</Date>
+            <Version>1.1.2</Version>
+            <Comment>First release</Comment>
+            <Name>Ergün Salman</Name>
+            <Email>Poyraz76@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

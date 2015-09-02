@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python-dmmy</Name>
+        <Homepage>https://github.com/tominsam/pythondaap</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>A DAAP client implemented in Python</Summary>
+        <Description>PythonDaap is a DAAP client implemented in Python, and based on PyTunes.</Description>
+        <Archive sha1sum="1f6a0e658a2cd190435534c36aa99db4e715d31f" type="zip">https://pypi.python.org/packages/source/d/dummy/dummy-0.1.0.zip</Archive>
+        <BuildDependencies>
+            <Dependency>python-setuptools</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python-dmmy</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/changes.*</Path>
+            <Path fileType="doc">/usr/requirements.*</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2015-09-01</Date>
+            <Version>0.1.0</Version>
+            <Comment>First release</Comment>
+            <Name>Ergün salman</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>
