@@ -17,70 +17,69 @@
         <Archive sha1sum="1c4453d80a6726f71b09c21b930e1b71519da981" type="targz">http://mirror.yandex.ru/gentoo-distfiles/distfiles/calamares-1.1.2.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>gettext</Dependency>
-            <Dependency>pkgconfig</Dependency>
-            <Dependency>qt5-declarative-devel</Dependency>
-            <Dependency>qt5-base-devel</Dependency>
-            <Dependency>qt5-svg-devel</Dependency>
-            <Dependency>qt5-webkit-devel</Dependency>
-            <Dependency>kconfig-devel</Dependency>
-            <Dependency>ki18n-devel</Dependency>
-            <Dependency>parted-devel</Dependency>
-            <Dependency>libatasmart-devel</Dependency>
-            <Dependency>udisks2-devel</Dependency>
-            <Dependency>polkit-qt-devel</Dependency>
-            <Dependency>kcoreaddons-devel</Dependency>
-            <Dependency>solid-devel</Dependency>
-            <Dependency>qt5-linguist</Dependency>
-            <Dependency>libyaml-devel</Dependency>
-            <Dependency>qt5-assistant-devel</Dependency>
-            <Dependency>qt5-designer-devel</Dependency>
-            <Dependency>python3-devel</Dependency>
-            <Dependency>boost-devel</Dependency>
             <Dependency>yaml-cpp</Dependency>
+            <Dependency>pkgconfig</Dependency>
+            <Dependency>boost-devel</Dependency>
+            <Dependency>ki18n-devel</Dependency>
             <Dependency>kcoreaddons</Dependency>
+            <Dependency>solid-devel</Dependency>
+            <Dependency>parted-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
+            <Dependency>qt5-svg-devel</Dependency>
+            <Dependency>udisks2-devel</Dependency>
+            <Dependency>libyaml-devel</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>kconfig-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>polkit-qt-devel</Dependency>
+            <Dependency>qt5-webkit-devel</Dependency>
+            <Dependency>libatasmart-devel</Dependency>
+            <Dependency>kcoreaddons-devel</Dependency>
+            <Dependency>qt5-designer-devel</Dependency>
+            <Dependency>qt5-assistant-devel</Dependency>
             <Dependency>libutil-linux-devel</Dependency>
+            <Dependency>qt5-declarative-devel</Dependency>
         </BuildDependencies>
         <Patches>
-<!--             <Patch level="1">luks_removal.patch</Patch> -->
+             <!--Patch level="1">luks_removal.patch</Patch-->
         </Patches>
     </Source>
-
     <Package>
         <Name>calamres</Name>
         <IsA>app:gui</IsA>
         <RuntimeDependencies>
             <Dependency>gawk</Dependency>
+            <Dependency>shadow</Dependency>
+            <Dependency>polkit</Dependency>
+            <Dependency>ntfs-3g</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>gptfdisk</Dependency>
             <Dependency>yaml-cpp</Dependency>
+            <Dependency>coreutils</Dependency>
             <Dependency>e2fsprogs</Dependency>
+            <Dependency>dmidecode</Dependency>
             <Dependency>efibootmgr</Dependency>
             <Dependency>libxkbfile</Dependency>
             <Dependency>dosfstools</Dependency>
-            <Dependency>ntfs-3g</Dependency>
-            <Dependency>coreutils</Dependency>
             <Dependency>util-linux</Dependency>
-            <Dependency>dmidecode</Dependency>
-            <Dependency>shadow</Dependency>
-            <Dependency>polkit</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="executable">/usr/bin/calamares</Path>
-            <Path fileType="library">/usr/lib</Path>
-            <Path fileType="library">/usr/lib/calamares/modules/*</Path>
-            <Path fileType="library">/usr/lib/calamares/</Path>
-            <Path fileType="library">/usr/lib/cmake/Calamares/</Path>
-            <Path fileType="data">/usr/include/libcalamares/*</Path>
-            <Path fileType="data">/usr/share/config/akonadi*</Path>
             <Path fileType="data">/usr/share/*</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/lib/calamares/</Path>
+            <Path fileType="executable">/usr/bin/calamares</Path>
             <Path fileType="doc">/usr/share/doc/calamares/*</Path>
+            <Path fileType="data">/usr/share/config/akonadi*</Path>
+            <Path fileType="data">/usr/include/libcalamares/*</Path>
+            <Path fileType="library">/usr/lib/cmake/Calamares/</Path>
+            <Path fileType="library">/usr/lib/calamares/modules/*</Path>
         </Files>
         <AdditionalFiles>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/calamares.desktop">calamares.desktop</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/installer.svg">installer.svg</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/usr/share/applications/calamares.desktop">calamares.desktop</AdditionalFile>
+            <!--AdditionalFile owner="root" permission="0644" target="/usr/lib/calamares/modules/unpackfs/unpackfs.conf">unpackfs.conf</AdditionalFile-->
         </AdditionalFiles>
     </Package>
-
     <History>
         <Update release="1">
             <Date>2015-09-01</Date>
