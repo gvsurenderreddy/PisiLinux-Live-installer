@@ -64,8 +64,8 @@
             <Dependency>util-linux</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="data">/usr/share/*</Path>
             <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/*</Path>
             <Path fileType="library">/usr/lib/calamares/</Path>
             <Path fileType="executable">/usr/bin/calamares</Path>
             <Path fileType="doc">/usr/share/doc/calamares/*</Path>
