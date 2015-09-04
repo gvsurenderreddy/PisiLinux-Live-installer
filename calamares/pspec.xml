@@ -32,6 +32,7 @@
             <Dependency>python3-devel</Dependency>
             <Dependency>kconfig-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
+            <Dependency>squashfs-tools</Dependency>
             <Dependency>polkit-qt-devel</Dependency>
             <Dependency>qt5-webkit-devel</Dependency>
             <Dependency>libatasmart-devel</Dependency>
@@ -63,6 +64,7 @@
             <Dependency>libxkbfile</Dependency>
             <Dependency>dosfstools</Dependency>
             <Dependency>util-linux</Dependency>
+            <Dependency>squashfs-tools</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>
