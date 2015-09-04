@@ -1,11 +1,11 @@
 [Desktop Entry]
 Type=Application
 Version=1.0
-Name=Calamares
-GenericName=System Installer for Pisi Linux
+Name=Pelikan
+GenericName=Pisi Linux installer
 TryExec=calamares
-Exec=pkexec /usr/bin/calamares
-Comment=Calamares — System Installer
+Exec=calamares
+Comment=Pisi Linux — System Installer
 Icon=calamares
 Terminal=false
 StartupNotify=false
