@@ -2,10 +2,10 @@
 Type=Application
 Version=1.0
 Name=Calamares
-GenericName=System Installer
+GenericName=Pisi Linux Installer
 TryExec=calamares
 Exec=calamares
-Comment=Calamares — System Installer
+Comment=Pisi Linux Installer
 Icon=calamares
 Terminal=false
 StartupNotify=false
