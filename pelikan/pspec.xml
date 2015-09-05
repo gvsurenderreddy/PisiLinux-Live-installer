@@ -13,9 +13,7 @@
         <IsA>app:gui</IsA>
         <Summary>A distribution independent installer framework</Summary>
         <Description>Pelikan is a distribution-independent system installer, with an advanced partitioning feature for both manual and automated partitioning operations.</Description>
-        <!--Archive sha1sum="1c4453d80a6726f71b09c21b930e1b71519da981" type="targz">https://github.com/calamares/calamares/releases/download/v1.1.2/calamares-1.1.2.tar.gz</Archive-->
-        <!--Archive sha1sum="1c4453d80a6726f71b09c21b930e1b71519da981" type="targz">http://mirror.yandex.ru/gentoo-distfiles/distfiles/calamares-1.1.2.tar.gz</Archive-->
-        <Archive sha1sum="7fcff7651d93fa2e8a495ed49cb0b50678865704" type="targz">https://dl.dropboxusercontent.com/s/9d0ok2csxostndj/calamares-1.1.2.tar.gz</Archive>
+        <Archive sha1sum="07efaec34643d4298aac5120202312a04d54a0e7" type="targz">https://dl.dropboxusercontent.com/s/itmakg8hvw6n26e/pelikan-1.1.2.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>gettext</Dependency>
             <Dependency>yaml-cpp</Dependency>
@@ -50,6 +48,7 @@
         <IsA>app:gui</IsA>
         <RuntimeDependencies>
             <Dependency>gawk</Dependency>
+            <Dependency>rsync</Dependency>
             <Dependency>shadow</Dependency>
             <Dependency>polkit</Dependency>
             <Dependency>ntfs-3g</Dependency>
@@ -81,6 +80,9 @@
             <AdditionalFile owner="root" permission="0644" target="/usr/share/calamares/branding/default/branding.desc">branding.desc</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/usr/share/calamares/branding/default/languages.png">languages.png</AdditionalFile>
         </AdditionalFiles>
+        <Provides>
+            <COMAR script="package.py">System.Package</COMAR>
+        </Provides>
     </Package>
     <History>
         <Update release="1">
