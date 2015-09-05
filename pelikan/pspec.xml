@@ -13,7 +13,7 @@
         <IsA>app:gui</IsA>
         <Summary>A distribution independent installer framework</Summary>
         <Description>Pelikan is a distribution-independent system installer, with an advanced partitioning feature for both manual and automated partitioning operations.</Description>
-        <Archive sha1sum="7fcff7651d93fa2e8a495ed49cb0b50678865704" type="targz">https://dl.dropboxusercontent.com/s/9d0ok2csxostndj/pelikan-1.1.2.tar.gz</Archive>
+        <Archive sha1sum="7fcff7651d93fa2e8a495ed49cb0b50678865704" type="targz">https://dl.dropboxusercontent.com/s/itmakg8hvw6n26e/pelikan-1.1.2.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>gettext</Dependency>
             <Dependency>yaml-cpp</Dependency>
