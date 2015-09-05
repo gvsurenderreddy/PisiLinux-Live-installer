@@ -2,7 +2,7 @@
 Type=Application
 Version=1.0
 Name=Pelikan
-GenericName=Pisi Linux for Installer
+GenericName=Pisi Linux Sistem Yükleyici
 TryExec=pelikan
 Exec=kdesu pelikan
 Comment=Pisi Linux — System Installer
