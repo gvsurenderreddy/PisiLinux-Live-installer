@@ -2,8 +2,8 @@
 <!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
-        <Name>calamares</Name>
-        <Homepage>http://calamares.io</Homepage>
+        <Name>Pelikan</Name>
+        <Homepage>http://pisilinux.org</Homepage>
         <Packager>
             <Name>Ergün Salman</Name>
             <Email>Poyraz76@pisilinux.org</Email>
@@ -12,10 +12,10 @@
         <Icon>calamares</Icon>
         <IsA>app:gui</IsA>
         <Summary>A distribution independent installer framework</Summary>
-        <Description>Calamares is a distribution-independent system installer, with an advanced partitioning feature for both manual and automated partitioning operations.</Description>
+        <Description>Pelikan is a distribution-independent system installer, with an advanced partitioning feature for both manual and automated partitioning operations.</Description>
         <!--Archive sha1sum="1c4453d80a6726f71b09c21b930e1b71519da981" type="targz">https://github.com/calamares/calamares/releases/download/v1.1.2/calamares-1.1.2.tar.gz</Archive-->
         <!--Archive sha1sum="1c4453d80a6726f71b09c21b930e1b71519da981" type="targz">http://mirror.yandex.ru/gentoo-distfiles/distfiles/calamares-1.1.2.tar.gz</Archive-->
-        <Archive sha1sum="07efaec34643d4298aac5120202312a04d54a0e7" type="targz">https://dl.dropboxusercontent.com/s/9d0ok2csxostndj/calamares-1.1.2.tar.gz</Archive>
+        <Archive sha1sum="7fcff7651d93fa2e8a495ed49cb0b50678865704" type="targz">https://dl.dropboxusercontent.com/s/9d0ok2csxostndj/calamares-1.1.2.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>gettext</Dependency>
             <Dependency>yaml-cpp</Dependency>
@@ -32,7 +32,6 @@
             <Dependency>python3-devel</Dependency>
             <Dependency>kconfig-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
-            <Dependency>squashfs-tools</Dependency>
             <Dependency>polkit-qt-devel</Dependency>
             <Dependency>qt5-webkit-devel</Dependency>
             <Dependency>libatasmart-devel</Dependency>
@@ -47,7 +46,7 @@
         </Patches>
     </Source>
     <Package>
-        <Name>calamres</Name>
+        <Name>pelikan</Name>
         <IsA>app:gui</IsA>
         <RuntimeDependencies>
             <Dependency>gawk</Dependency>
@@ -64,21 +63,23 @@
             <Dependency>libxkbfile</Dependency>
             <Dependency>dosfstools</Dependency>
             <Dependency>util-linux</Dependency>
-            <Dependency>squashfs-tools</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="data">/usr/share/*</Path>
             <Path fileType="library">/usr/lib/calamares/</Path>
-            <Path fileType="executable">/usr/bin/calamares</Path>
+            <Path fileType="executable">/usr/bin/pelikan</Path>
             <Path fileType="data">/usr/include/libcalamares/*</Path>
             <Path fileType="library">/usr/lib/cmake/Calamares/</Path>
             <Path fileType="library">/usr/lib/calamares/modules/*</Path>
         </Files>
         <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/pelikan">pelikan</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/installer.svg">installer.svg</AdditionalFile>
-            <AdditionalFile owner="root" permission="0755" target="/usr/share/applications/calamares.desktop">calamares.desktop</AdditionalFile>
-            <!--AdditionalFile owner="root" permission="0644" target="/usr/lib/calamares/modules/unpackfs/unpackfs.conf">unpackfs.conf</AdditionalFile-->
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/pelikan.desktop">pelikan.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/calamares/branding/default/squid.png">squid.png</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/calamares/branding/default/branding.desc">branding.desc</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/calamares/branding/default/languages.png">languages.png</AdditionalFile>
         </AdditionalFiles>
     </Package>
     <History>

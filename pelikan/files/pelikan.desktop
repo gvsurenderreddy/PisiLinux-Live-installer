@@ -1,0 +1,22 @@
+[Desktop Entry]
+Categories=Qt;System;
+Comment[tr_TR]=Pelikan — Sistem yükleyici
+Comment=Pelikan — System Installer
+Exec=pelikan
+GenericName[tr_TR]=Pisi Linux Yükleyici
+GenericName=System Installer for Pisi Linux
+Icon=calamares
+MimeType=
+Name[tr_TR]=Pelikan
+Name=Pelikan
+Path=
+StartupNotify=false
+Terminal=false
+TerminalOptions=
+TryExec=pelikan
+Type=Application
+Version=1.0
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
