@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>Calamares</Name>
+        <Homepage>http://pisilinux.org</Homepage>
+        <Packager>
+            <Name>Ergün Salman</Name>
+            <Email>Poyraz76@pisilinux.org</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <Icon>calamares</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>A distribution independent installer framework</Summary>
+        <Description>Pelikan is a distribution-independent system installer, with an advanced partitioning feature for both manual and automated partitioning operations.</Description>
+        <Archive sha1sum="07efaec34643d4298aac5120202312a04d54a0e7" type="targz">https://dl.dropboxusercontent.com/s/itmakg8hvw6n26e/pelikan-1.1.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gettext</Dependency>
+            <Dependency>yaml-cpp</Dependency>
+            <Dependency>pkgconfig</Dependency>
+            <Dependency>boost-devel</Dependency>
+            <Dependency>ki18n-devel</Dependency>
+            <Dependency>kcoreaddons</Dependency>
+            <Dependency>solid-devel</Dependency>
+            <Dependency>parted-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
+            <Dependency>qt5-svg-devel</Dependency>
+            <Dependency>udisks2-devel</Dependency>
+            <Dependency>libyaml-devel</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>kconfig-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>polkit-qt-devel</Dependency>
+            <Dependency>qt5-webkit-devel</Dependency>
+            <Dependency>libatasmart-devel</Dependency>
+            <Dependency>kcoreaddons-devel</Dependency>
+            <Dependency>qt5-designer-devel</Dependency>
+            <Dependency>qt5-assistant-devel</Dependency>
+            <Dependency>libutil-linux-devel</Dependency>
+            <Dependency>qt5-declarative-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+             <!--Patch level="1">luks_removal.patch</Patch-->
+        </Patches>
+    </Source>
+    <Package>
+        <Name>Calamares</Name>
+        <IsA>app:gui</IsA>
+        <RuntimeDependencies>
+            <Dependency>gawk</Dependency>
+            <Dependency>rsync</Dependency>
+            <Dependency>shadow</Dependency>
+            <Dependency>polkit</Dependency>
+            <Dependency>ntfs-3g</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>gptfdisk</Dependency>
+            <Dependency>yaml-cpp</Dependency>
+            <Dependency>coreutils</Dependency>
+            <Dependency>e2fsprogs</Dependency>
+            <Dependency>dmidecode</Dependency>
+            <Dependency>efibootmgr</Dependency>
+            <Dependency>libxkbfile</Dependency>
+            <Dependency>dosfstools</Dependency>
+            <Dependency>util-linux</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/*</Path>
+            <Path fileType="library">/usr/lib/calamares/</Path>
+            <Path fileType="executable">/usr/bin/pelikan</Path>
+            <Path fileType="data">/usr/include/libcalamares/*</Path>
+            <Path fileType="library">/usr/lib/cmake/Calamares/</Path>
+            <Path fileType="library">/usr/lib/calamares/modules/*</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/calamares">pelikan</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/installer.svg">installer.svg</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/calamares.desktop">pelikan.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/calamares/branding/default/squid.png">squid.png</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/calamares/branding/default/branding.desc">branding.desc</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/calamares/branding/default/languages.png">languages.png</AdditionalFile>
+        </AdditionalFiles>
+        <Provides>
+            <COMAR script="package.py">System.Package</COMAR>
+        </Provides>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2015-09-01</Date>
+            <Version>1.1.2</Version>
+            <Comment>First release</Comment>
+            <Name>Ergün Salman</Name>
+            <Email>Poyraz76@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>
