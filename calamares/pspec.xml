@@ -13,9 +13,9 @@
         <IsA>app:gui</IsA>
         <Summary>A distribution independent installer framework</Summary>
         <Description>Pelikan is a distribution-independent system installer, with an advanced partitioning feature for both manual and automated partitioning operations.</Description>
-        <Archive sha1sum="1c4453d80a6726f71b09c21b930e1b71519da981" type="targz">https://github.com/calamares/calamares/releases/download/v1.1.2/calamares-1.1.2.tar.gz</Archive>
--        <Archive sha1sum="1c4453d80a6726f71b09c21b930e1b71519da981" type="targz">http://mirror.yandex.ru/gentoo-distfiles/distfiles/calamares-1.1.2.tar.gz</Archive>
-        <!--Archive sha1sum="07efaec34643d4298aac5120202312a04d54a0e7" type="targz">https://dl.dropboxusercontent.com/s/itmakg8hvw6n26e/pelikan-1.1.2.tar.gz</Archive-->
+        <!--Archive sha1sum="1c4453d80a6726f71b09c21b930e1b71519da981" type="targz">https://github.com/calamares/calamares/releases/download/v1.1.2/calamares-1.1.2.tar.gz</Archive-->
+        <!--Archive sha1sum="1c4453d80a6726f71b09c21b930e1b71519da981" type="targz">http://mirror.yandex.ru/gentoo-distfiles/distfiles/calamares-1.1.2.tar.gz</Archive-->
+        <Archive sha1sum="b19380e2ec919253f194629f3787484da99518ee" type="targz">https://dl.dropboxusercontent.com/s/9d0ok2csxostndj/calamares-1.1.2.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>gettext</Dependency>
             <Dependency>yaml-cpp</Dependency>
@@ -69,16 +69,20 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="data">/usr/share/*</Path>
             <Path fileType="library">/usr/lib/calamares/</Path>
-            <Path fileType="executable">/usr/bin/pelikan</Path>
+            <Path fileType="executable">/usr/bin/calamares</Path>
             <Path fileType="data">/usr/include/libcalamares/*</Path>
             <Path fileType="library">/usr/lib/cmake/Calamares/</Path>
             <Path fileType="library">/usr/lib/calamares/modules/*</Path>
         </Files>
         <AdditionalFiles>
-            <AdditionalFile owner="root" permission="0755" target="/usr/bin/calamares">pelikan</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/calamares">calamares</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/installer.svg">installer.svg</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/calamares.desktop">pelikan.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/calamares/modules/users.conf">users.conf</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/calamares/modules/packages.conf">packages.conf</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/calamares/modules/unpackfs.conf">unpackfs.conf</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/usr/share/calamares/branding/default/squid.png">squid.png</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/calamares.desktop">calamares.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/calamares/modules/bootloader.conf">bootloader.conf</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/usr/share/calamares/branding/default/branding.desc">branding.desc</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/usr/share/calamares/branding/default/languages.png">languages.png</AdditionalFile>
         </AdditionalFiles>
